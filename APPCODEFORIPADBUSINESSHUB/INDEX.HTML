@@ -1,0 +1,2016 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Oh Sew Sheek">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Complete business hub for Oh Sew Sheek - manage clients, fabrics, quotes, and more!">
+  <title>Oh Sew Sheek Business Hub</title><!-- PWA Manifest -->
+  <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIk9oIFNldyBTaGVlayBCdXNpbmVzcyBIdWIiLAogICJzaG9ydF9uYW1lIjogIk9oIFNldyBTaGVlayIsCiAgImRlc2NyaXB0aW9uIjogIkNvbXBsZXRlIGJ1c2luZXNzIGh1YiBmb3IgT2ggU2V3IFNoZWVrIC0gbWFuYWdlIGNsaWVudHMsIGZhYnJpY3MsIHF1b3RlcywgYW5kIG1vcmUhIiwKICAic3RhcnRfdXJsIjogIi4vIiwKICAiZGlzcGxheSI6ICJzdGFuZGFsb25lIiwKICAiYmFja2dyb3VuZF9jb2xvciI6ICIjMDAwMDAwIiwKICAidGhlbWVfY29sb3IiOiAiIzAwMDAwMCIsCiAgIm9yaWVudGF0aW9uIjogImFueSIsCiAgImljb25zIjogWwogICAgewogICAgICAic3JjIjogImRhdGE6aW1hZ2Uvc3ZnK3htbCwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB3aWR0aD0nMTkyJyBoZWlnaHQ9JzE5Micgdmlld0JveD0nMCAwIDE5MiAxOTInJTNFJTNDZGVmcyUzRSUzQ2xpbmVhckdyYWRpZW50IGlkPSdnJyB4MT0nMCUyNScgeTE9JzAlMjUnIHgyPScxMDAlMjUnIHkyPScxMDAlMjUnJTNFJTNDc3RvcCBvZmZzZXQ9JzAlMjUnIHN0eWxlPSdzdG9wLWNvbG9yOiUyM2ZmMTBmMCcvJTNFJTNDc3RvcCBvZmZzZXQ9JzUwJTI1JyBzdHlsZT0nc3RvcC1jb2xvcjolMjMwMGZmODgnLyUzRSUzQ3N0b3Agb2Zmc2V0PScxMDAlMjUnIHN0eWxlPSdzdG9wLWNvbG9yOiUyMzAwZmZmZicvJTNFJTNDL2xpbmVhckdyYWRpZW50JTNFJTNDL2RlZnMlM0UlM0NyZWN0IHdpZHRoPScxOTInIGhlaWdodD0nMTkyJyBmaWxsPSd1cmwoJTIzZyknIHJ4PScyNCcvJTNFJTNDdGV4dCB4PScxMCcgeT0nMTMwJyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtc2l6ZT0nMTIwJyBmaWxsPSclMjNmZmYnJTNF8J+nteKciO+4jyUzQy90ZXh0JTNFJTNDdGV4dCB4PScyMCcgeT0nMTc1JyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtc2l6ZT0nMjInIGZvbnQtd2VpZ2h0PSdib2xkJyBmaWxsPSclMjNmZmYnJTNFT2ggU2V3IFNoZWVrJTNDL3RleHQlM0UlM0Mvc3ZnJTNFIiwKICAgICAgInNpemVzIjogIjE5MngxOTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwKICAgICAgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIgogICAgfSwKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWwsJTNDc3ZnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgd2lkdGg9JzUxMicgaGVpZ2h0PSc1MTInIHZpZXdCb3g9JzAgMCA1MTIgNTEyJyUzRSUzQ2RlZnMlM0UlM0NsaW5lYXJHcmFkaWVudCBpZD0nZycgeDElM0QnMCUyNScgeTE9JzAlMjUnIHgyPScxMDAlMjUnIHkyPScxMDAlMjUnJTNFJTNDc3RvcCBvZmZzZXQ9JzAlMjUnIHN0eWxlPSdzdG9wLWNvbG9yOiUyM2ZmMTBmMCcvJTNFJTNDc3RvcCBvZmZzZXQ9JzUwJTI1JyBzdHlsZT0nc3RvcC1jb2xvcjolMjMwMGZmODgnLyUzRSUzQ3N0b3Agb2Zmc2V0PScxMDAlMjUnIHN0eWxlPSdzdG9wLWNvbG9yOiUyMzAwZmZmZicvJTNFJTNDL2xpbmVhckdyYWRpZW50JTNFJTNDL2RlZnMlM0UlM0NyZWN0IHdpZHRoPSc1MTInIGhlaWdodD0nNTEyJyBmaWxsPSd1cmwoJTIzZyknIHJ4PSc2NCcvJTNFJTNDdGV4dCB4PSc0MCcgeT0nMzYwJyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtc2l6ZT0nMzAwJyBmaWxsPSclMjNmZmYnJTNF8J+nteKciO+4jyUzQy90ZXh0JTNFJTNDdGV4dCB4PSc2MCcgeT0nNDYwJyBmb250LWZhbWlseT0nQXJpYWwnIGZvbnQtc2l6ZT0nNTUnIGZvbnQtd2VpZ2h0PSdib2xkJyBmaWxsPSclMjNmZmYnJTNFT2ggU2V3IFNoZWVrJTNDL3RleHQlM0UlM0Mvc3ZnJTNFIiwKICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIiwKICAgICAgInB1cnBvc2UiOiAiYW55IG1hc2thYmxlIgogICAgfQogIF0KfQ=="><!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ff10f0'/%3E%3Cstop offset='50%25' style='stop-color:%2300ff88'/%3E%3Cstop offset='100%25' style='stop-color:%2300ffff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='180' height='180' fill='url(%23g)' rx='40'/%3E%3Ctext x='15' y='125' font-family='Arial' font-size='110' fill='%23fff'%3E🧵✂️%3C/text%3E%3Ctext x='18' y='165' font-family='Arial' font-size='20' font-weight='bold' fill='%23fff'%3EOh Sew Sheek%3C/text%3E%3C/svg%3E">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&amp;family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    .font-signature { font-family: 'Righteous', sans-serif; }
+    .font-body { font-family: 'Quicksand', sans-serif; }
+    
+    .gradient-bg {
+      background: #000000;
+    }
+    
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    
+    .gradient-accent {
+      background: linear-gradient(135deg, #ff10f0 0%, #00ff88 50%, #00ffff 100%);
+    }
+    
+    .text-accent { color: #ff10f0; }
+    
+    .card {
+      background: #ffffff;
+      border: 2px solid rgba(255, 16, 240, 0.3);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(255, 16, 240, 0.15);
+    }
+    
+    .card:hover {
+      border-color: rgba(255, 16, 240, 0.6);
+      box-shadow: 0 8px 32px rgba(255, 16, 240, 0.3);
+      transform: translateY(-2px);
+    }
+    
+    .nav-btn {
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      background: #ffffff;
+      border: 2px solid rgba(255, 16, 240, 0.2);
+      color: #1a1a1a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .nav-btn:hover {
+      background: #fff0ff;
+      color: #ff10f0;
+      border-color: rgba(255, 16, 240, 0.5);
+    }
+    
+    .nav-btn.active {
+      background: linear-gradient(135deg, #ff10f0 0%, #00ffff 100%);
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 4px 15px rgba(255, 16, 240, 0.5);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #ff10f0 0%, #00ffff 100%);
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(255, 16, 240, 0.5);
+    }
+    
+    .btn-secondary {
+      background: #fff0ff;
+      border: 2px solid rgba(255, 16, 240, 0.3);
+      color: #ff10f0;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background: #ffe6ff;
+      border-color: #ff10f0;
+    }
+    
+    input, select, textarea {
+      background: #ffffff;
+      border: 2px solid rgba(255, 16, 240, 0.3);
+      color: #1a1a1a;
+      transition: all 0.2s ease;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+      border-color: #ff10f0;
+      box-shadow: 0 0 0 3px rgba(255, 16, 240, 0.15);
+      outline: none;
+    }
+    
+    input::placeholder, textarea::placeholder {
+      color: rgba(26, 26, 26, 0.4);
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+      backdrop-filter: blur(5px);
+    }
+    
+    .modal.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-content {
+      background: #ffffff;
+      border: 3px solid rgba(255, 16, 240, 0.4);
+      border-radius: 1rem;
+      max-width: 700px;
+      width: 90%;
+      max-height: 90%;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(255, 16, 240, 0.4);
+    }
+    
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: linear-gradient(135deg, #ff10f0 0%, #00ffff 100%);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      transform: translateX(400px);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+      box-shadow: 0 8px 32px rgba(255, 16, 240, 0.5);
+    }
+    
+    .toast.show {
+      transform: translateX(0);
+    }
+    
+    .prompt-box {
+      background: #fff0ff;
+      border: 2px dashed rgba(255, 16, 240, 0.4);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      position: relative;
+    }
+    
+    .copy-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.75rem;
+    }
+    
+    .rebuttal-item {
+      background: #ffffff;
+      border-left: 4px solid #ff10f0;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 4px rgba(255, 16, 240, 0.15);
+    }
+    
+    .stat-card {
+      background: linear-gradient(135deg, rgba(255, 16, 240, 0.1) 0%, rgba(0, 255, 255, 0.1) 100%);
+      border: 2px solid rgba(255, 16, 240, 0.3);
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+    
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 250px;
+      background: #000000;
+      border-right: 3px solid rgba(255, 16, 240, 0.3);
+      padding: 2rem 1rem;
+      overflow-y: auto;
+      z-index: 100;
+    }
+    
+    .main-content {
+      margin-left: 250px;
+      padding: 2rem;
+    }
+    
+    /* PWA Splash Screen */
+    .splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #ff10f0 0%, #00ff88 50%, #00ffff 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: fadeOut 1s ease 1.5s forwards;
+    }
+    
+    .splash-logo {
+      font-size: 6rem;
+      animation: bounce 1s ease infinite;
+    }
+    
+    .splash-text {
+      color: white;
+      font-family: 'Righteous', sans-serif;
+      font-size: 2rem;
+      margin-top: 1rem;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .splash-subtext {
+      color: rgba(255, 255, 255, 0.9);
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+    
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    /* Install prompt */
+    .install-prompt {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(200px);
+      background: linear-gradient(135deg, #ff10f0 0%, #00ffff 100%);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 32px rgba(255, 16, 240, 0.5);
+      z-index: 1001;
+      transition: transform 0.3s ease;
+      max-width: 90%;
+      text-align: center;
+    }
+    
+    .install-prompt.show {
+      transform: translateX(-50%) translateY(0);
+    }
+    
+    .install-prompt button {
+      background: white;
+      color: #ff10f0;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      margin: 0.5rem 0.25rem 0;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 3px solid rgba(255, 16, 240, 0.3);
+        padding: 1rem;
+      }
+      .main-content {
+        margin-left: 0;
+        padding: 1rem;
+      }
+      
+      .nav-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+      }
+      
+      .modal-content {
+        width: 95%;
+        max-height: 85%;
+        padding: 1rem;
+      }
+      
+      .stat-card {
+        padding: 1rem;
+      }
+      
+      .card {
+        padding: 1rem;
+      }
+      
+      h2 {
+        font-size: 1.75rem;
+      }
+      
+      .toast {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        width: auto;
+      }
+      
+      .splash-logo {
+        font-size: 4rem;
+      }
+      
+      .splash-text {
+        font-size: 1.5rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .main-content {
+        padding: 0.75rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .pricing-result {
+        font-size: 2rem;
+      }
+    }
+    
+    .fabric-swatch {
+      width: 40px;
+      height: 40px;
+      border-radius: 0.5rem;
+      border: 2px solid rgba(255, 16, 240, 0.4);
+    }
+    
+    .pricing-result {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ff10f0;
+      text-shadow: 0 0 30px rgba(255, 16, 240, 0.3);
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full font-body"><!-- Splash Screen -->
+  <div class="splash-screen" id="splash-screen">
+   <div class="splash-logo">
+    🧵✂️
+   </div>
+   <div class="splash-text">
+    Oh Sew Sheek
+   </div>
+   <div class="splash-subtext">
+    Your Complete Business Hub
+   </div>
+  </div><!-- Install Prompt -->
+  <div class="install-prompt" id="install-prompt">
+   <div class="font-bold mb-2">
+    📱 Install Oh Sew Sheek Hub
+   </div>
+   <div class="text-sm mb-2">
+    Add to your home screen for quick access!
+   </div><button onclick="installApp()">Install</button> <button onclick="dismissInstall()">Not Now</button>
+  </div>
+  <div class="gradient-bg h-full w-full overflow-auto flex"><!-- Sidebar Navigation -->
+   <nav class="sidebar">
+    <div class="mb-8">
+     <h1 id="business-name" class="font-signature text-3xl text-accent mb-1">Oh Sew Sheek</h1>
+     <p id="tagline" class="text-xs" style="color: rgba(255, 255, 255, 0.7);">Your Complete Business Hub</p>
+    </div>
+    <div class="space-y-2"><button class="nav-btn active w-full" data-section="dashboard"> <span>📊</span> Dashboard </button> <button class="nav-btn w-full" data-section="measurements"> <span>📏</span> Measurements </button> <button class="nav-btn w-full" data-section="fabric"> <span>🧵</span> Fabric Library </button> <button class="nav-btn w-full" data-section="pricing"> <span>💰</span> Pricing Calculator </button> <button class="nav-btn w-full" data-section="quotes"> <span>📋</span> Quotes &amp; Invoices </button> <button class="nav-btn w-full" data-section="timeline"> <span>📅</span> Project Timeline </button> <button class="nav-btn w-full" data-section="content"> <span>📱</span> Content Ideas </button> <button class="nav-btn w-full" data-section="mockup"> <span>🎨</span> Mockup Generator </button> <button class="nav-btn w-full" data-section="rebuttal"> <span>💬</span> Rebuttal Helper </button> <button class="nav-btn w-full" data-section="small-projects"> <span>✂️</span> Small Projects </button> <button class="nav-btn w-full" data-section="glossary"> <span>📖</span> Sewing Glossary </button> <button class="nav-btn w-full" data-section="calendar"> <span>📅</span> 2026 Calendar </button> <button class="nav-btn w-full" data-section="daily"> <span>✨</span> Daily Motivation </button>
+    </div>
+   </nav><!-- Main Content -->
+   <main class="main-content flex-1"><!-- Dashboard Section -->
+    <section id="section-dashboard" class="section-content">
+     <h2 class="text-4xl font-bold text-accent mb-6">Dashboard</h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <div class="stat-card cursor-pointer hover:scale-105 transition-transform" onclick="switchSection('measurements')">
+       <div class="text-sm" style="color: #666;">
+        Total Clients
+       </div>
+       <div id="stat-clients" class="text-3xl font-bold text-accent mt-2">
+        0
+       </div>
+      </div>
+      <div class="stat-card cursor-pointer hover:scale-105 transition-transform" onclick="switchSection('quotes')">
+       <div class="text-sm" style="color: #666;">
+        Active Projects
+       </div>
+       <div id="stat-projects" class="text-3xl font-bold text-accent mt-2">
+        0
+       </div>
+      </div>
+      <div class="stat-card cursor-pointer hover:scale-105 transition-transform" onclick="switchSection('fabric')">
+       <div class="text-sm" style="color: #666;">
+        Fabric Items
+       </div>
+       <div id="stat-fabrics" class="text-3xl font-bold text-accent mt-2">
+        0
+       </div>
+      </div>
+     </div>
+     <div class="card p-6 rounded-xl">
+      <h3 class="text-xl font-bold text-accent mb-4">Quick Actions</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3"><button onclick="switchSection('measurements')" class="btn-secondary px-4 py-3 rounded-lg text-sm">+ Add Client</button> <button onclick="switchSection('fabric')" class="btn-secondary px-4 py-3 rounded-lg text-sm">+ Add Fabric</button> <button onclick="switchSection('quotes')" class="btn-secondary px-4 py-3 rounded-lg text-sm">Create Quote</button> <button onclick="switchSection('content')" class="btn-secondary px-4 py-3 rounded-lg text-sm">Get Content Ideas</button>
+      </div>
+     </div>
+    </section><!-- Measurements Section -->
+    <section id="section-measurements" class="section-content hidden">
+     <div class="flex justify-between items-center mb-6">
+      <h2 class="text-4xl font-bold text-accent">Client Measurements</h2><button id="btn-add-measurement" class="btn-primary px-6 py-3 rounded-lg">+ Add Client</button>
+     </div>
+     <div id="measurements-list" class="grid grid-cols-1 md:grid-cols-2 gap-4"><!-- Measurements will render here -->
+     </div>
+    </section><!-- Fabric Library Section -->
+    <section id="section-fabric" class="section-content hidden">
+     <div class="flex justify-between items-center mb-6">
+      <h2 class="text-4xl font-bold text-accent">Fabric Library</h2><button id="btn-add-fabric" class="btn-primary px-6 py-3 rounded-lg">+ Add Fabric</button>
+     </div>
+     <div id="fabric-list" class="grid grid-cols-1 md:grid-cols-3 gap-4"><!-- Fabrics will render here -->
+     </div>
+    </section><!-- Pricing Calculator Section -->
+    <section id="section-pricing" class="section-content hidden">
+     <h2 class="text-4xl font-bold text-accent mb-6">Pricing Calculator</h2>
+     <div class="card p-6 rounded-xl max-w-2xl">
+      <form id="pricing-form" class="space-y-4">
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Item Type <span class="text-xs text-gray-400">(What are you making?)</span></label> <select id="pricing-item" class="w-full px-4 py-2 rounded-lg"> <option value="bonnet">Bonnet</option> <option value="facemask">Face Mask</option> <option value="hoodie">Hoodie</option> <option value="socks">Socks</option> <option value="durag">Durag</option> <option value="vest">Vest</option> <option value="joggers">Joggers</option> <option value="custom">Custom Item</option> </select>
+       </div>
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Material Cost ($) <span class="text-xs text-gray-400">(Total cost of fabric, thread, elastic, etc.)</span></label> <input type="number" id="pricing-material" step="0.01" min="0" class="w-full px-4 py-2 rounded-lg" placeholder="Enter total material cost (e.g., 15.00)">
+       </div>
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Hours to Complete <span class="text-xs text-gray-400">(How long will it take to make?)</span></label> <input type="number" id="pricing-hours" step="0.5" min="0" class="w-full px-4 py-2 rounded-lg" placeholder="Enter hours (e.g., 2.5)">
+       </div>
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Hourly Rate ($) <span class="text-xs text-gray-400">(What do you charge per hour?)</span></label> <input type="number" id="pricing-rate" step="1" min="0" value="25" class="w-full px-4 py-2 rounded-lg" placeholder="Your hourly rate (default: $25)">
+       </div>
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Additional Costs ($) <span class="text-xs text-gray-400">(Shipping, packaging, labels, etc.)</span></label> <input type="number" id="pricing-additional" step="0.01" min="0" value="0" class="w-full px-4 py-2 rounded-lg" placeholder="Enter additional costs (optional)">
+       </div>
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Profit Margin (%) <span class="text-xs text-gray-400">(Your desired profit percentage)</span></label> <input type="number" id="pricing-margin" step="5" min="0" value="30" class="w-full px-4 py-2 rounded-lg" placeholder="Enter profit margin % (default: 30%)">
+       </div>
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Selling Platform <span class="text-xs text-gray-400">(Where will you sell this?)</span></label> <select id="pricing-platform" class="w-full px-4 py-2 rounded-lg"> <option value="etsy">Etsy (6.5% fee)</option> <option value="facebook">Facebook Marketplace (5% fee)</option> <option value="website">Your Website (0% fee)</option> <option value="custom">Custom Fee %</option> </select>
+       </div><button type="button" onclick="calculatePrice()" class="btn-primary w-full py-3 rounded-lg text-lg">Calculate Price</button>
+      </form>
+      <div id="pricing-results" class="mt-8 hidden">
+       <div class="text-center mb-6">
+        <div class="text-sm" style="color: #000000;" mb-2>
+         Recommended Selling Price
+        </div>
+        <div id="final-price" class="pricing-result">
+         $0.00
+        </div>
+       </div>
+       <div class="space-y-3 text-sm">
+        <div class="flex justify-between" style="color: #000000;"><span>Material Cost:</span> <span id="breakdown-material">$0.00</span>
+        </div>
+        <div class="flex justify-between" style="color: #000000;"><span>Labor Cost:</span> <span id="breakdown-labor">$0.00</span>
+        </div>
+        <div class="flex justify-between" style="color: #000000;"><span>Additional Costs:</span> <span id="breakdown-additional">$0.00</span>
+        </div>
+        <div class="flex justify-between" style="color: #000000;"><span>Subtotal:</span> <span id="breakdown-subtotal">$0.00</span>
+        </div>
+        <div class="flex justify-between" style="color: #000000;"><span>Profit Margin:</span> <span id="breakdown-profit">$0.00</span>
+        </div>
+        <div class="flex justify-between" style="color: #000000;"><span>Platform Fee:</span> <span id="breakdown-fee">$0.00</span>
+        </div>
+        <div class="border-t border-pink-500 pt-2 mt-2"></div>
+        <div class="flex justify-between font-bold text-lg" style="color: #000000;"><span>Your Profit:</span> <span id="breakdown-net" class="text-accent">$0.00</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Quotes & Invoices Section -->
+    <section id="section-quotes" class="section-content hidden">
+     <div class="flex justify-between items-center mb-6">
+      <h2 class="text-4xl font-bold text-accent">Quotes &amp; Invoices</h2><button id="btn-create-quote" class="btn-primary px-6 py-3 rounded-lg">+ Create Quote</button>
+     </div>
+     <div id="quotes-list" class="space-y-4"><!-- Quotes will render here -->
+     </div>
+    </section><!-- Timeline Section -->
+    <section id="section-timeline" class="section-content hidden">
+     <h2 class="text-4xl font-bold text-accent mb-6">Project Timeline</h2>
+     <div class="card p-6 rounded-xl max-w-3xl">
+      <div class="space-y-6">
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full gradient-accent flex items-center justify-center font-bold text-white flex-shrink-0">
+         1
+        </div>
+        <div class="flex-1">
+         <h3 class="text-lg font-bold" style="color: #000000;" mb-2>Consultation &amp; Measurements</h3>
+         <p class="text-sm" style="color: #000000;">Meet with client, discuss design, take measurements. Allow 1-2 days.</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full gradient-accent flex items-center justify-center font-bold text-white flex-shrink-0">
+         2
+        </div>
+        <div class="flex-1">
+         <h3 class="text-lg font-bold" style="color: #000000;" mb-2>Quote &amp; Approval</h3>
+         <p class="text-sm" style="color: #000000;">Create detailed quote, send to client, wait for approval. Allow 2-3 days.</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full gradient-accent flex items-center justify-center font-bold text-white flex-shrink-0">
+         3
+        </div>
+        <div class="flex-1">
+         <h3 class="text-lg font-bold" style="color: #000000;" mb-2>Material Sourcing</h3>
+         <p class="text-sm" style="color: #000000;">Purchase fabrics and supplies. Check your Fabric Library. Allow 3-5 days for delivery.</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full gradient-accent flex items-center justify-center font-bold text-white flex-shrink-0">
+         4
+        </div>
+        <div class="flex-1">
+         <h3 class="text-lg font-bold" style="color: #000000;" mb-2>Pattern &amp; Cutting</h3>
+         <p class="text-sm" style="color: #000000;">Create or adjust pattern, cut fabric pieces. Allow 1-2 days.</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full gradient-accent flex items-center justify-center font-bold text-white flex-shrink-0">
+         5
+        </div>
+        <div class="flex-1">
+         <h3 class="text-lg font-bold" style="color: #000000;" mb-2>Sewing &amp; Construction</h3>
+         <p class="text-sm" style="color: #000000;">Main sewing process. Time varies by complexity (use your pricing calculator estimate).</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full gradient-accent flex items-center justify-center font-bold text-white flex-shrink-0">
+         6
+        </div>
+        <div class="flex-1">
+         <h3 class="text-lg font-bold" style="color: #000000;" mb-2>Finishing &amp; Quality Check</h3>
+         <p class="text-sm" style="color: #000000;">Add finishing touches, press, inspect quality. Allow 1 day.</p>
+        </div>
+       </div>
+       <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-full gradient-accent flex items-center justify-center font-bold text-white flex-shrink-0">
+         7
+        </div>
+        <div class="flex-1">
+         <h3 class="text-lg font-bold" style="color: #000000;" mb-2>Final Fitting &amp; Delivery</h3>
+         <p class="text-sm" style="color: #000000;">Client tries on, make final adjustments, deliver/ship. Allow 1-2 days.</p>
+        </div>
+       </div>
+      </div>
+      <div class="mt-8 p-4 rounded-lg" style="background: rgba(255, 107, 157, 0.1); border: 1px solid rgba(255, 107, 157, 0.3);">
+       <p class="text-sm" style="color: #000000;"><strong>Total Timeline:</strong> Typically 10-20 days from consultation to delivery, depending on project complexity and material availability.</p>
+      </div>
+     </div>
+    </section><!-- Content Ideas Section -->
+    <section id="section-content" class="section-content hidden">
+     <h2 class="text-4xl font-bold text-accent mb-6">Viral Content Ideas 2025-2026</h2>
+     <div class="card p-6 rounded-xl mb-6">
+      <h3 class="text-xl font-bold text-accent mb-4">🤖 Generate Custom Content with ChatGPT</h3>
+      <p style="color: #000000;" class="text-sm mb-4">Create personalized viral content ideas for your sewing business!</p>
+      <div class="space-y-3">
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">What product or topic?</label> <input type="text" id="content-topic-input" class="w-full px-4 py-2 rounded-lg" placeholder="e.g., Custom hoodies, Silk bonnets, Behind the scenes">
+       </div>
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Platform</label> <select id="content-platform-input" class="w-full px-4 py-2 rounded-lg"> <option value="instagram">Instagram Reel</option> <option value="tiktok">TikTok</option> <option value="facebook">Facebook Post</option> <option value="pinterest">Pinterest Pin</option> <option value="all">All Platforms</option> </select>
+       </div><button onclick="generateContentPrompt()" class="btn-primary w-full py-3 rounded-lg">Generate ChatGPT Prompt</button>
+      </div>
+      <div id="content-prompt-result" class="hidden mt-4">
+       <h4 class="text-sm font-bold mb-2" style="color: #1a1a1a;">Copy this prompt into ChatGPT:</h4>
+       <div class="prompt-box"><button onclick="copyContentPrompt()" class="copy-btn btn-secondary">Copy</button>
+        <p id="content-prompt-text" class="text-sm leading-relaxed" style="color: #1a1a1a;"></p>
+       </div>
+      </div>
+     </div>
+     <h3 class="text-2xl font-bold text-accent mb-4">Ready-to-Use Content Templates</h3>
+     <div class="space-y-6">
+      <div class="card p-6 rounded-xl">
+       <div class="flex justify-between items-start mb-4">
+        <div>
+         <h3 class="text-xl font-bold text-accent mb-2">📱 Instagram Reel: "Custom Durag in 60 Seconds"</h3>
+         <p class="text-sm" style="color: #000000;">Fast-paced time-lapse showing your sewing process</p>
+        </div><button onclick="copyContent(0)" class="btn-secondary px-4 py-2 rounded-lg text-sm">Copy</button>
+       </div>
+       <div class="prompt-box">
+        <p class="text-sm mb-3" style="color: #000000;">📍 Watch me transform fabric into a custom silk durag! ✨</p>
+        <p class="text-sm mb-3" style="color: #000000;">Every stitch is made with love 💕 Custom orders open!</p>
+        <p class="text-sm text-accent font-bold">#DuragSeason #CustomDurag #SmallBusinessCheck #BlackOwnedBusiness #SewingTok #MadeToOrder #WaveCheck #SilkDurag #CustomSewing #SupportSmallBusiness2025 #HandmadeWithLove #SeamstressLife #FashionEntrepreneur #CreateYourWave #SewingBusiness #EtsySeller2025 #CustomFashion #DuragDesigner #WavesOnSwim</p>
+       </div>
+      </div>
+      <div class="card p-6 rounded-xl">
+       <div class="flex justify-between items-start mb-4">
+        <div>
+         <h3 class="text-xl font-bold text-accent mb-2">🔥 TikTok: "Bonnet vs Pillow Challenge"</h3>
+         <p class="text-sm" style="color: #000000;">Show hair protection benefits with before/after</p>
+        </div><button onclick="copyContent(1)" class="btn-secondary px-4 py-2 rounded-lg text-sm">Copy</button>
+       </div>
+       <div class="prompt-box">
+        <p class="text-sm mb-3" style="color: #000000;">POV: You finally invested in a silk bonnet 😍✨</p>
+        <p class="text-sm mb-3" style="color: #000000;">My hair has NEVER been this healthy! Custom bonnets with YOUR fabric choice 💫 Link in bio!</p>
+        <p class="text-sm text-accent font-bold">#SilkBonnet #HairCareRoutine #HealthyHairJourney #NaturalHairCare #SleepBonnet #ProtectiveStyle #CustomBonnet #HandmadeHairCare #SmallBizSupport #BlackHairCare2025 #SatinBonnet #HairGoals #BonnetLife #NightTimeRoutine #HairProtection #EtsyFinds #CustomMade #SewingSmallBusiness #HairCareEssentials</p>
+       </div>
+      </div>
+      <div class="card p-6 rounded-xl">
+       <div class="flex justify-between items-start mb-4">
+        <div>
+         <h3 class="text-xl font-bold text-accent mb-2">💪 Facebook: Behind the Business Post</h3>
+         <p class="text-sm" style="color: #000000;">Share your story, connect emotionally</p>
+        </div><button onclick="copyContent(2)" class="btn-secondary px-4 py-2 rounded-lg text-sm">Copy</button>
+       </div>
+       <div class="prompt-box">
+        <p class="text-sm mb-3" style="color: #000000;">Started with a $50 sewing machine and a dream 🙏💕✨</p>
+        <p class="text-sm mb-3" style="color: #000000;">2 years later, I've made custom pieces for over 200+ happy clients! Every durag, bonnet, and mask is sewn with pride. Thank you for supporting my small business journey 💕</p>
+        <p class="text-sm mb-3" style="color: #000000;">Drop a 💕 if you believe in supporting small businesses in 2025!</p>
+        <p class="text-sm text-accent font-bold">#SmallBusinessJourney #EntrepreneurLife #BlackOwnedBusiness #SewingBusiness #MadeWithLove #CustomOrders #SupportLocal #HandmadeGoods #SmallBusiness2025 #BusinessGrowth #CreateYourLegacy</p>
+       </div>
+      </div>
+      <div class="card p-6 rounded-xl">
+       <div class="flex justify-between items-start mb-4">
+        <div>
+         <h3 class="text-xl font-bold text-accent mb-2">🎨 Pinterest Pin: "10 Custom Hoodie Designs"</h3>
+         <p class="text-sm" style="color: #000000;">Create carousel showcasing your work</p>
+        </div><button onclick="copyContent(3)" class="btn-secondary px-4 py-2 rounded-lg text-sm">Copy</button>
+       </div>
+       <div class="prompt-box">
+        <p class="text-sm mb-3" style="color: #000000;"><strong>Title:</strong> 10 Custom Hoodie Ideas That Will Make You Stand Out in 2025</p>
+        <p class="text-sm mb-3" style="color: #000000;"><strong>Description:</strong> Looking for unique custom hoodie designs? Check out these trending styles! From embroidered names to patchwork designs, these custom hoodies are perfect for gifts or treating yourself. All handmade by a small business owner. Click to order yours! 💫</p>
+        <p class="text-sm text-accent font-bold">#CustomHoodies #PersonalizedFashion #HoodieDesign #CustomClothing #HandmadeHoodies #EmbroideredHoodies #UniqueStyle #SmallBusinessFinds #EtsyStyle #CustomApparel2025</p>
+       </div>
+      </div>
+     </div>
+    </section><!-- Mockup Generator Section -->
+    <section id="section-mockup" class="section-content hidden">
+     <h2 class="text-4xl font-bold text-accent mb-6">ChatGPT Mockup Generator</h2>
+     <div class="card p-6 rounded-xl max-w-3xl">
+      <p style="color: #000000;" class="mb-4">Generate professional mockup prompts for ChatGPT (with DALL-E) to create product images for your sewing items.</p>
+      <div class="space-y-4 mb-6">
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Select Product Type</label> <select id="mockup-type" class="w-full px-4 py-2 rounded-lg"> <option value="bonnet">Silk Bonnet</option> <option value="durag">Durag</option> <option value="facemask">Face Mask</option> <option value="hoodie">Custom Hoodie</option> <option value="socks">Custom Socks</option> <option value="vest">Vest</option> <option value="joggers">Joggers</option> </select>
+       </div>
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Fabric Pattern/Color</label> <input type="text" id="mockup-fabric" class="w-full px-4 py-2 rounded-lg" placeholder="e.g., rose gold silk, black satin, floral print">
+       </div>
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Special Details (optional)</label> <input type="text" id="mockup-details" class="w-full px-4 py-2 rounded-lg" placeholder="e.g., embroidered name, rhinestone accents">
+       </div><button onclick="generateMockupPrompt()" class="btn-primary w-full py-3 rounded-lg">Generate ChatGPT Prompt</button>
+      </div>
+      <div id="mockup-result" class="hidden">
+       <h3 class="text-lg font-bold mb-3" style="color: #000000;">Copy this prompt into ChatGPT:</h3>
+       <div class="prompt-box"><button onclick="copyMockupPrompt()" class="copy-btn btn-secondary">Copy</button>
+        <p id="mockup-prompt-text" class="text-sm leading-relaxed" style="color: #000000;"></p>
+       </div>
+       <div class="mt-4 p-4 rounded-lg" style="background: rgba(255, 107, 157, 0.1);">
+        <p class="text-sm" style="color: #000000;">💡 <strong>Tip:</strong> After generating the image, ask ChatGPT to "remove the background" or "place it on a lifestyle background" for even better results!</p>
+       </div>
+      </div>
+     </div>
+    </section><!-- Rebuttal Helper Section -->
+    <section id="section-rebuttal" class="section-content hidden">
+     <h2 class="text-4xl font-bold text-accent mb-6">Customer Rebuttal Helper</h2>
+     <div class="card p-6 rounded-xl mb-6">
+      <p style="color: #000000;" class="mb-4">Professional responses to common customer objections and questions. Use these to handle difficult situations with grace!</p><input type="text" id="rebuttal-search" placeholder="Search rebuttals..." class="w-full px-4 py-3 rounded-lg mb-4"> <button id="btn-add-custom-rebuttal" class="btn-primary px-6 py-3 rounded-lg">+ Add Custom Rebuttal</button>
+     </div>
+     <div id="rebuttal-list" class="space-y-4 mb-6"><!-- Rebuttals will be rendered here -->
+     </div>
+     <div class="card p-6 rounded-xl">
+      <h3 class="text-xl font-bold text-accent mb-4">🤖 Generate Better Response with ChatGPT</h3>
+      <p style="color: #000000;" class="text-sm mb-4">Enter a customer objection and get an AI-powered professional response!</p>
+      <div class="space-y-3">
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Customer Objection</label> <textarea id="rebuttal-objection-input" rows="3" class="w-full px-4 py-2 rounded-lg" placeholder="e.g., Your shipping takes too long"></textarea>
+       </div><button onclick="generateRebuttalPrompt()" class="btn-primary w-full py-3 rounded-lg">Generate ChatGPT Prompt</button>
+      </div>
+      <div id="rebuttal-prompt-result" class="hidden mt-4">
+       <h4 class="text-sm font-bold mb-2" style="color: #1a1a1a;">Copy this prompt into ChatGPT:</h4>
+       <div class="prompt-box"><button onclick="copyRebuttalPrompt()" class="copy-btn btn-secondary">Copy</button>
+        <p id="rebuttal-prompt-text" class="text-sm leading-relaxed" style="color: #1a1a1a;"></p>
+       </div>
+      </div>
+     </div>
+    </section><!-- Small Projects Section -->
+    <section id="section-small-projects" class="section-content hidden">
+     <h2 class="text-4xl font-bold text-accent mb-6">Small Projects Guide</h2>
+     <div class="space-y-6"><!-- Bonnet Measurements -->
+      <div class="card p-6 rounded-xl">
+       <h3 class="text-2xl font-bold text-accent mb-4">🎀 Bonnet Measurements &amp; Elastic</h3>
+       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+         <h4 class="text-lg font-bold mb-3" style="color: #1a1a1a;">Bonnet Sizes</h4>
+         <div class="space-y-3">
+          <div class="p-3 rounded-lg" style="background: #fff0f7; border: 2px solid rgba(255, 20, 147, 0.2);">
+           <div class="flex justify-between mb-1"><span class="font-bold" style="color: #1a1a1a;">Child Size</span> <span class="text-accent font-bold">18-20"</span>
+           </div>
+           <p class="text-xs" style="color: #666;">Head circumference • Ages 2-8</p>
+          </div>
+          <div class="p-3 rounded-lg" style="background: #fff0f7; border: 2px solid rgba(255, 20, 147, 0.2);">
+           <div class="flex justify-between mb-1"><span class="font-bold" style="color: #1a1a1a;">Teen Size</span> <span class="text-accent font-bold">20-22"</span>
+           </div>
+           <p class="text-xs" style="color: #666;">Head circumference • Ages 9-15</p>
+          </div>
+          <div class="p-3 rounded-lg" style="background: #fff0f7; border: 2px solid rgba(255, 20, 147, 0.2);">
+           <div class="flex justify-between mb-1"><span class="font-bold" style="color: #1a1a1a;">Adult Standard</span> <span class="text-accent font-bold">22-23"</span>
+           </div>
+           <p class="text-xs" style="color: #666;">Head circumference • Most common</p>
+          </div>
+          <div class="p-3 rounded-lg" style="background: #fff0f7; border: 2px solid rgba(255, 20, 147, 0.2);">
+           <div class="flex justify-between mb-1"><span class="font-bold" style="color: #1a1a1a;">Adult Large</span> <span class="text-accent font-bold">23-25"</span>
+           </div>
+           <p class="text-xs" style="color: #666;">Head circumference • Locs/braids</p>
+          </div>
+         </div>
+        </div>
+        <div>
+         <h4 class="text-lg font-bold mb-3" style="color: #1a1a1a;">Elastic Length Guide</h4>
+         <div class="space-y-3">
+          <div class="p-3 rounded-lg" style="background: #fff0f7; border: 2px solid rgba(255, 20, 147, 0.2);">
+           <div class="flex justify-between mb-1"><span class="font-bold" style="color: #1a1a1a;">1" Wide Elastic</span> <span class="text-accent font-bold">18-20"</span>
+           </div>
+           <p class="text-xs" style="color: #666;">Standard bonnets • Good stretch</p>
+          </div>
+          <div class="p-3 rounded-lg" style="background: #fff0f7; border: 2px solid rgba(255, 20, 147, 0.2);">
+           <div class="flex justify-between mb-1"><span class="font-bold" style="color: #1a1a1a;">1.5" Wide Elastic</span> <span class="text-accent font-bold">19-21"</span>
+           </div>
+           <p class="text-xs" style="color: #666;">Extra coverage • Wider band</p>
+          </div>
+          <div class="p-3 rounded-lg" style="background: #fff0f7; border: 2px solid rgba(255, 20, 147, 0.2);">
+           <div class="flex justify-between mb-1"><span class="font-bold" style="color: #1a1a1a;">2" Wide Elastic</span> <span class="text-accent font-bold">20-22"</span>
+           </div>
+           <p class="text-xs" style="color: #666;">Maximum coverage • Very secure</p>
+          </div>
+         </div>
+         <div class="mt-4 p-3 rounded-lg" style="background: rgba(255, 20, 147, 0.1); border: 2px solid rgba(255, 20, 147, 0.3);">
+          <p class="text-xs font-bold mb-1" style="color: #1a1a1a;">💡 Pro Tip:</p>
+          <p class="text-xs" style="color: #666;">Cut elastic 2-3" shorter than head measurement for snug fit. Test stretch before final sewing!</p>
+         </div>
+        </div>
+       </div>
+       <div class="mt-6 p-4 rounded-lg" style="background: #ffe6f2; border: 2px solid rgba(255, 20, 147, 0.3);">
+        <h4 class="text-lg font-bold mb-2" style="color: #1a1a1a;">Fabric Recommendations</h4>
+        <ul class="space-y-1 text-sm" style="color: #666;">
+         <li>✨ <strong>Silk Satin:</strong> Best for hair protection, prevents breakage</li>
+         <li>✨ <strong>Polyester Satin:</strong> Budget-friendly alternative, still smooth</li>
+         <li>✨ <strong>Satin-lined Cotton:</strong> Cute exterior, protective interior</li>
+         <li>✨ <strong>Fabric Needed:</strong> 1/2 yard for standard adult bonnet</li>
+        </ul>
+       </div>
+      </div><!-- Scrunchies -->
+      <div class="card p-6 rounded-xl">
+       <h3 class="text-2xl font-bold text-accent mb-4">💫 Scrunchie Measurements</h3>
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-lg" style="background: #fff0f7; border: 2px solid rgba(255, 20, 147, 0.2);">
+         <h4 class="font-bold mb-2" style="color: #1a1a1a;">Mini Scrunchie</h4>
+         <div class="space-y-1 text-sm" style="color: #666;">
+          <p><strong>Fabric:</strong> 3" x 16"</p>
+          <p><strong>Elastic:</strong> 7" of 1/4" elastic</p>
+          <p><strong>Best for:</strong> Kids, thin hair</p>
+         </div>
+        </div>
+        <div class="p-4 rounded-lg" style="background: #fff0f7; border: 2px solid rgba(255, 20, 147, 0.2);">
+         <h4 class="font-bold mb-2" style="color: #1a1a1a;">Standard Scrunchie</h4>
+         <div class="space-y-1 text-sm" style="color: #666;">
+          <p><strong>Fabric:</strong> 4" x 22"</p>
+          <p><strong>Elastic:</strong> 9" of 1/4" elastic</p>
+          <p><strong>Best for:</strong> Most hair types</p>
+         </div>
+        </div>
+        <div class="p-4 rounded-lg" style="background: #fff0f7; border: 2px solid rgba(255, 20, 147, 0.2);">
+         <h4 class="font-bold mb-2" style="color: #1a1a1a;">Jumbo Scrunchie</h4>
+         <div class="space-y-1 text-sm" style="color: #666;">
+          <p><strong>Fabric:</strong> 6" x 30"</p>
+          <p><strong>Elastic:</strong> 10" of 1/4" elastic</p>
+          <p><strong>Best for:</strong> Thick/curly hair</p>
+         </div>
+        </div>
+       </div>
+       <div class="mt-4 p-4 rounded-lg" style="background: rgba(255, 20, 147, 0.1); border: 2px solid rgba(255, 20, 147, 0.3);">
+        <h4 class="text-lg font-bold mb-2" style="color: #1a1a1a;">Quick Tips</h4>
+        <ul class="space-y-1 text-sm" style="color: #666;">
+         <li>🎀 Use velvet, satin, or cotton for different looks</li>
+         <li>🎀 Fold fabric in half lengthwise, sew into tube</li>
+         <li>🎀 Turn right-side out, thread elastic through</li>
+         <li>🎀 Sew elastic ends together, then close fabric opening</li>
+         <li>🎀 Time: 5-10 minutes per scrunchie!</li>
+        </ul>
+       </div>
+      </div><!-- Business Acronyms -->
+      <div class="card p-6 rounded-xl">
+       <h3 class="text-2xl font-bold text-accent mb-4">💬 Business Lingo</h3>
+       <div class="space-y-3">
+        <div class="p-3 rounded-lg" style="background: #fff0f7; border-left: 4px solid #ff1493;">
+         <h4 class="font-bold mb-1" style="color: #1a1a1a;">T.A.B</h4>
+         <p class="text-sm" style="color: #666;">Tomorrow As Usual - When you promise to finish "tomorrow" but we all know it means next week 😅</p>
+        </div>
+        <div class="p-3 rounded-lg" style="background: #fff0f7; border-left: 4px solid #ff1493;">
+         <h4 class="font-bold mb-1" style="color: #1a1a1a;">BLB</h4>
+         <p class="text-sm" style="color: #666;">Buyers Love Bonnets - Your customers absolutely adore your silk bonnet collection! 💕</p>
+        </div>
+        <div class="p-3 rounded-lg" style="background: #fff0f7; border-left: 4px solid #ff1493;">
+         <h4 class="font-bold mb-1" style="color: #1a1a1a;">WIP</h4>
+         <p class="text-sm" style="color: #666;">Work In Progress - Projects currently on your sewing table</p>
+        </div>
+        <div class="p-3 rounded-lg" style="background: #fff0f7; border-left: 4px solid #ff1493;">
+         <h4 class="font-bold mb-1" style="color: #1a1a1a;">UFO</h4>
+         <p class="text-sm" style="color: #666;">UnFinished Object - That project you started 6 months ago... 👀</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section><!-- Glossary Section -->
+    <section id="section-glossary" class="section-content hidden">
+     <h2 class="text-4xl font-bold text-accent mb-6">Sewing &amp; Business Glossary</h2>
+     <div class="card p-6 rounded-xl"><input type="text" id="glossary-search" placeholder="Search terms..." class="w-full px-4 py-3 rounded-lg mb-6">
+      <div id="glossary-list" class="space-y-4"><!-- Glossary terms will render here -->
+      </div>
+     </div>
+    </section><!-- 2026 Calendar Section -->
+    <section id="section-calendar" class="section-content hidden">
+     <h2 class="text-4xl font-bold text-accent mb-6">2026 Calendar</h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="calendar-container"><!-- Calendar months will render here -->
+     </div>
+    </section><!-- Daily Motivation Section -->
+    <section id="section-daily" class="section-content hidden">
+     <h2 class="text-4xl font-bold text-accent mb-6">Daily Motivation &amp; Tasks</h2>
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6"><!-- Daily Scripture Card -->
+      <div class="card p-6 rounded-xl">
+       <h3 class="text-2xl font-bold text-accent mb-4">🙏 Today's Scripture</h3>
+       <div id="daily-scripture" class="mb-4">
+        <p id="scripture-text" class="text-lg mb-3 italic leading-relaxed" style="color: #000000;"></p>
+        <p id="scripture-reference" class="text-sm text-accent font-bold"></p>
+       </div>
+       <p id="scripture-date" class="text-sm text-gray-400"></p>
+      </div><!-- Daily Tasks Card -->
+      <div class="card p-6 rounded-xl">
+       <div class="flex justify-between items-center mb-4">
+        <h3 class="text-2xl font-bold text-accent">✨ Today's Tasks</h3><button id="btn-add-task" class="btn-primary px-4 py-2 rounded-lg text-sm">+ Add Task</button>
+       </div>
+       <div id="daily-tasks-list" class="space-y-2"><!-- Daily tasks will render here -->
+       </div>
+      </div>
+     </div><!-- All Tasks Section -->
+     <div class="card p-6 rounded-xl mt-6">
+      <h3 class="text-xl font-bold text-accent mb-4">📋 All Tasks</h3>
+      <div id="all-tasks-list" class="space-y-2"><!-- All tasks will render here -->
+      </div>
+     </div>
+    </section>
+   </main><!-- Modals -->
+   <div id="modal-measurement" class="modal">
+    <div class="modal-content p-6">
+     <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-bold text-accent">Client Measurements</h3><button onclick="closeModal('measurement')" class="text-2xl" style="color: #1a1a1a;">×</button>
+     </div>
+     <form id="form-measurement" class="space-y-4">
+      <div class="p-3 rounded-lg" style="background: rgba(255, 16, 240, 0.1);">
+       <h4 class="text-sm font-bold" style="color: #000000;" mb-3>👤 Client Information</h4>
+       <div class="space-y-3">
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Client Name *</label> <input type="text" name="clientName" required class="w-full px-4 py-2 rounded-lg" placeholder="Enter client's full name">
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Email</label> <input type="email" name="email" class="w-full px-4 py-2 rounded-lg" placeholder="client@email.com">
+        </div>
+       </div>
+      </div>
+      <div class="p-3 rounded-lg" style="background: rgba(0, 255, 136, 0.1);">
+       <h4 class="text-sm font-bold" style="color: #000000;" mb-3>📏 Body Measurements</h4>
+       <div class="grid grid-cols-2 gap-4">
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Bust (inches)</label> <input type="text" name="bust" class="w-full px-4 py-2 rounded-lg" placeholder="Fullest part of chest (e.g., 36)">
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Waist (inches)</label> <input type="text" name="waist" class="w-full px-4 py-2 rounded-lg" placeholder="Natural waistline (e.g., 28)">
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Hips (inches)</label> <input type="text" name="hips" class="w-full px-4 py-2 rounded-lg" placeholder="Fullest part of hips (e.g., 38)">
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Inseam (inches)</label> <input type="text" name="inseam" class="w-full px-4 py-2 rounded-lg" placeholder="Crotch to ankle (e.g., 30)">
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Sleeve Length (inches)</label> <input type="text" name="sleeve" class="w-full px-4 py-2 rounded-lg" placeholder="Shoulder to wrist (e.g., 24)">
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Head Circumference (inches)</label> <input type="text" name="head" class="w-full px-4 py-2 rounded-lg" placeholder="Around forehead (e.g., 22)">
+        </div>
+       </div>
+      </div>
+      <div class="p-3 rounded-lg" style="background: rgba(0, 255, 255, 0.1);">
+       <h4 class="text-sm font-bold" style="color: #000000;" mb-3>📝 Additional Notes</h4>
+       <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Notes</label> <textarea name="notes" rows="3" class="w-full px-4 py-2 rounded-lg" placeholder="Special fit preferences, style notes, or important details..."></textarea>
+       </div>
+      </div>
+      <div class="flex gap-3"><button type="submit" class="btn-primary px-6 py-3 rounded-lg flex-1">Save Client</button> <button type="button" onclick="closeModal('measurement')" class="btn-secondary px-6 py-3 rounded-lg">Cancel</button>
+      </div>
+     </form>
+    </div>
+   </div>
+   <div id="modal-fabric" class="modal">
+    <div class="modal-content p-6">
+     <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-bold text-accent">Add Fabric</h3><button onclick="closeModal('fabric')" class="text-2xl" style="color: #1a1a1a;">×</button>
+     </div>
+     <form id="form-fabric" class="space-y-4">
+      <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Fabric Name *</label> <input type="text" name="fabricName" required class="w-full px-4 py-2 rounded-lg" placeholder="e.g., Rose Gold Silk">
+      </div>
+      <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Fabric Type *</label> <select name="fabricType" required class="w-full px-4 py-2 rounded-lg"> <option value="">Select type...</option> <option value="silk">Silk</option> <option value="satin">Satin</option> <option value="cotton">Cotton</option> <option value="jersey">Jersey</option> <option value="fleece">Fleece</option> <option value="denim">Denim</option> <option value="polyester">Polyester</option> <option value="linen">Linen</option> <option value="velvet">Velvet</option> </select>
+      </div>
+      <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Color/Pattern *</label> <input type="text" name="fabricColor" required class="w-full px-4 py-2 rounded-lg" placeholder="e.g., Rose gold, Floral print">
+      </div>
+      <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Yardage Available</label> <input type="number" name="yardage" step="0.25" min="0" class="w-full px-4 py-2 rounded-lg">
+      </div>
+      <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Cost per Yard ($)</label> <input type="number" name="cost" step="0.01" min="0" class="w-full px-4 py-2 rounded-lg">
+      </div>
+      <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Supplier</label> <input type="text" name="supplier" class="w-full px-4 py-2 rounded-lg" placeholder="Where did you buy it?">
+      </div>
+      <div class="flex gap-3"><button type="submit" class="btn-primary px-6 py-3 rounded-lg flex-1">Save Fabric</button> <button type="button" onclick="closeModal('fabric')" class="btn-secondary px-6 py-3 rounded-lg">Cancel</button>
+      </div>
+     </form>
+    </div>
+   </div>
+   <div id="modal-custom-rebuttal" class="modal">
+    <div class="modal-content p-6">
+     <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-bold text-accent">Add Custom Rebuttal</h3><button onclick="closeModal('custom-rebuttal')" class="text-2xl" style="color: #1a1a1a;">×</button>
+     </div>
+     <form id="form-custom-rebuttal" class="space-y-4">
+      <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Customer Objection *</label> <input type="text" name="rebuttalText" required class="w-full px-4 py-2 rounded-lg" placeholder="e.g., Your prices are too high">
+      </div>
+      <div class="flex gap-3"><button type="submit" class="btn-primary px-6 py-3 rounded-lg flex-1">Save Rebuttal</button> <button type="button" onclick="closeModal('custom-rebuttal')" class="btn-secondary px-6 py-3 rounded-lg">Cancel</button>
+      </div>
+     </form>
+    </div>
+   </div>
+   <div id="modal-quote" class="modal">
+    <div class="modal-content p-6">
+     <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-bold text-accent">Create Quote/Invoice</h3><button onclick="closeModal('quote')" class="text-2xl" style="color: #1a1a1a;">×</button>
+     </div>
+     <form id="form-quote" class="space-y-4">
+      <div class="p-3 rounded-lg" style="background: rgba(255, 16, 240, 0.1);">
+       <h4 class="text-sm font-bold" style="color: #000000;" mb-3>📋 Client Information</h4>
+       <div class="space-y-3">
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Select Existing Client</label> <select id="quote-client-select" class="w-full px-4 py-2 rounded-lg" onchange="fillClientInfo(this.value)"> <option value="">-- Select from saved clients or enter new below --</option> </select>
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Client Name *</label> <input type="text" id="quote-client-name" name="clientName" required class="w-full px-4 py-2 rounded-lg" placeholder="Enter client name">
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Client Email *</label> <input type="email" id="quote-client-email" name="email" required class="w-full px-4 py-2 rounded-lg" placeholder="Enter client email">
+        </div>
+       </div>
+      </div>
+      <div class="p-3 rounded-lg" style="background: rgba(0, 255, 255, 0.1);">
+       <h4 class="text-sm font-bold" style="color: #000000;" mb-3>🧵 Project Details</h4>
+       <div class="space-y-3">
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Item/Service *</label> <input type="text" name="itemName" required class="w-full px-4 py-2 rounded-lg" placeholder="e.g., Custom Silk Bonnet">
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Details &amp; Description</label> <textarea name="quoteDetails" rows="4" class="w-full px-4 py-2 rounded-lg" placeholder="Describe the project, materials, customizations, timeline..."></textarea>
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Inspiration Photo (Optional)</label> <input type="file" id="inspiration-photo" name="inspirationPhoto" accept="image/*" class="w-full px-4 py-2 rounded-lg" style="color: #000000;">
+         <p class="text-xs text-gray-400 mt-1">Upload a photo for outfit/design inspiration</p>
+        </div>
+       </div>
+      </div>
+      <div class="p-3 rounded-lg" style="background: rgba(0, 255, 136, 0.1);">
+       <h4 class="text-sm font-bold" style="color: #000000;" mb-3>💰 Pricing &amp; Status</h4>
+       <div class="space-y-3">
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Total Price ($) *</label> <input type="number" name="price" required step="0.01" min="0" class="w-full px-4 py-2 rounded-lg">
+        </div>
+        <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Status</label> <select name="status" class="w-full px-4 py-2 rounded-lg"> <option value="draft">Draft</option> <option value="sent">Sent to Client</option> <option value="approved">Approved</option> <option value="completed">Completed</option> </select>
+        </div>
+       </div>
+      </div>
+      <div class="flex gap-3"><button type="submit" class="btn-primary px-6 py-3 rounded-lg flex-1">Save Quote</button> <button type="button" onclick="closeModal('quote')" class="btn-secondary px-6 py-3 rounded-lg">Cancel</button>
+      </div>
+     </form>
+    </div>
+   </div>
+   <div id="modal-task" class="modal">
+    <div class="modal-content p-6">
+     <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-bold text-accent">Add Task</h3><button onclick="closeModal('task')" class="text-2xl" style="color: #1a1a1a;">×</button>
+     </div>
+     <form id="form-task" class="space-y-4">
+      <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Task Description *</label> <input type="text" name="taskText" required class="w-full px-4 py-2 rounded-lg" placeholder="What do you need to do?">
+      </div>
+      <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Due Date</label> <input type="date" name="dueDate" class="w-full px-4 py-2 rounded-lg">
+      </div>
+      <div><label class="block text-sm font-medium mb-2" style="color: #000000;">Notes</label> <textarea name="taskNotes" rows="3" class="w-full px-4 py-2 rounded-lg" placeholder="Add any additional details or notes..."></textarea>
+      </div>
+      <div class="flex gap-3"><button type="submit" class="btn-primary px-6 py-3 rounded-lg flex-1">Add Task</button> <button type="button" onclick="closeModal('task')" class="btn-secondary px-6 py-3 rounded-lg">Cancel</button>
+      </div>
+     </form>
+    </div>
+   </div><!-- Toast -->
+   <div id="toast" class="toast"></div>
+  </div>
+  <script>
+    // PWA Installation
+    let deferredPrompt;
+    
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      document.getElementById('install-prompt').classList.add('show');
+    });
+    
+    function installApp() {
+      const prompt = document.getElementById('install-prompt');
+      prompt.classList.remove('show');
+      
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            showToast('App installed! 🎉');
+          }
+          deferredPrompt = null;
+        });
+      }
+    }
+    
+    function dismissInstall() {
+      document.getElementById('install-prompt').classList.remove('show');
+    }
+    
+    // Hide splash screen after load
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('splash-screen').style.display = 'none';
+      }, 2000);
+    });
+    
+    // LocalStorage key
+    const STORAGE_KEY = 'ohsewsheek_data';
+    
+    let currentData = [];
+    let currentSection = 'dashboard';
+    let editingItem = null;
+
+    // Daily Bible Scriptures (365 days)
+    const dailyScriptures = [
+      { text: "I can do all things through Christ who strengthens me.", ref: "Philippians 4:13" },
+      { text: "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.", ref: "Jeremiah 29:11" },
+      { text: "Trust in the Lord with all your heart and lean not on your own understanding.", ref: "Proverbs 3:5" },
+      { text: "The Lord is my strength and my shield; my heart trusts in him, and he helps me.", ref: "Psalm 28:7" },
+      { text: "Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.", ref: "Joshua 1:9" },
+      { text: "But those who hope in the Lord will renew their strength. They will soar on wings like eagles.", ref: "Isaiah 40:31" },
+      { text: "The Lord bless you and keep you; the Lord make his face shine on you and be gracious to you.", ref: "Numbers 6:24-25" },
+      { text: "Commit to the Lord whatever you do, and he will establish your plans.", ref: "Proverbs 16:3" },
+      { text: "And we know that in all things God works for the good of those who love him.", ref: "Romans 8:28" },
+      { text: "Cast all your anxiety on him because he cares for you.", ref: "1 Peter 5:7" },
+      { text: "The Lord is close to the brokenhearted and saves those who are crushed in spirit.", ref: "Psalm 34:18" },
+      { text: "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.", ref: "Philippians 4:6" },
+      { text: "The joy of the Lord is your strength.", ref: "Nehemiah 8:10" },
+      { text: "God is our refuge and strength, an ever-present help in trouble.", ref: "Psalm 46:1" },
+      { text: "He gives strength to the weary and increases the power of the weak.", ref: "Isaiah 40:29" },
+      { text: "The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you.", ref: "Zephaniah 3:17" },
+      { text: "Do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you.", ref: "Isaiah 41:10" },
+      { text: "And my God will meet all your needs according to the riches of his glory in Christ Jesus.", ref: "Philippians 4:19" },
+      { text: "Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up.", ref: "Galatians 6:9" },
+      { text: "With God all things are possible.", ref: "Matthew 19:26" },
+      { text: "The Lord will fight for you; you need only to be still.", ref: "Exodus 14:14" },
+      { text: "This is the day the Lord has made; let us rejoice and be glad in it.", ref: "Psalm 118:24" },
+      { text: "For God has not given us a spirit of fear, but of power and of love and of a sound mind.", ref: "2 Timothy 1:7" },
+      { text: "The Lord is my light and my salvation—whom shall I fear?", ref: "Psalm 27:1" },
+      { text: "Be still, and know that I am God.", ref: "Psalm 46:10" },
+      { text: "The Lord is my shepherd, I lack nothing.", ref: "Psalm 23:1" },
+      { text: "May the God of hope fill you with all joy and peace as you trust in him.", ref: "Romans 15:13" },
+      { text: "Let all that you do be done in love.", ref: "1 Corinthians 16:14" },
+      { text: "Whatever you do, work at it with all your heart, as working for the Lord.", ref: "Colossians 3:23" },
+      { text: "His mercies are new every morning; great is your faithfulness.", ref: "Lamentations 3:22-23" },
+      { text: "In everything give thanks; for this is the will of God in Christ Jesus for you.", ref: "1 Thessalonians 5:18" }
+    ];
+
+    // Extend scriptures to 365 days
+    while (dailyScriptures.length < 365) {
+      dailyScriptures.push(...dailyScriptures.slice(0, Math.min(31, 365 - dailyScriptures.length)));
+    }
+
+    // Rebuttals Data
+    const rebuttals = [
+      {
+        objection: "Your prices are too high",
+        response: "I completely understand wanting the best value! My prices reflect the quality materials, time, and craftsmanship that go into each custom piece. Unlike mass-produced items, yours is made specifically for you and will last much longer. Would you like to see a breakdown of what goes into creating your item?"
+      },
+      {
+        objection: "I can get it cheaper on Amazon/Shein",
+        response: "You're right that those platforms offer lower prices! The difference is that my pieces are handmade just for you with high-quality materials. Fast fashion items often don't fit well and fall apart quickly. I offer a custom fit, your choice of fabric, and a product that will last years. Plus, you're supporting a small business! 💕"
+      },
+      {
+        objection: "How long will it take?",
+        response: "Great question! Custom orders typically take 10-20 days from start to finish. This includes sourcing your chosen materials, creating the pattern, sewing, and quality checks. I'll keep you updated throughout the process! Rush orders can be accommodated for an additional fee if you need it sooner."
+      },
+      {
+        objection: "Can I get a discount?",
+        response: "I appreciate you asking! My prices are already set as fairly as possible to reflect quality materials and my time. However, I do offer discounts for bulk orders (3+ items) or returning customers. I also have a referral program - bring a friend and you both get 10% off your next order!"
+      }
+    ];
+
+    // Glossary Data
+    const glossaryTerms = [
+      { term: "Selvage/Selvedge", definition: "The tightly woven finished edge on both sides of fabric that prevents it from unraveling. Always cut this off before sewing." },
+      { term: "Bias", definition: "The diagonal grain of fabric at 45° angle. Fabric cut on the bias has more stretch and drape." },
+      { term: "Grain", definition: "The direction of threads in woven fabric. Lengthwise grain runs parallel to selvage, crosswise grain runs perpendicular." },
+      { term: "Seam Allowance", definition: "The fabric between the seam line and the raw edge, typically 5/8 inch for garments." },
+      { term: "Right Side/Wrong Side", definition: "Right side is the front/outer side of fabric that will be visible. Wrong side is the back/inner side." },
+      { term: "Notions", definition: "Small items needed for sewing like thread, buttons, zippers, elastic, etc." },
+      { term: "Basting", definition: "Long, temporary stitches used to hold fabric together before permanent sewing. Easy to remove." },
+      { term: "Backstitch", definition: "Reverse stitching at the beginning and end of seams to lock threads and prevent unraveling." },
+      { term: "Profit Margin", definition: "The percentage of the selling price that is profit after all costs. Standard is 30-50% for handmade goods." }
+    ];
+
+    // Load data from localStorage
+    function loadData() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        currentData = JSON.parse(stored);
+      }
+      updateDashboardStats();
+    }
+
+    // Save data to localStorage
+    function saveData() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(currentData));
+      updateDashboardStats();
+    }
+
+    // Initialize
+    function initializeApp() {
+      loadData();
+      renderRebuttals();
+      renderGlossary();
+      setupEventListeners();
+    }
+
+    function setupEventListeners() {
+      // Modal close on backdrop click
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            const modalId = modal.id.replace('modal-', '');
+            closeModal(modalId);
+          }
+        });
+      });
+    }
+
+    // Navigation
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const section = btn.dataset.section;
+        switchSection(section);
+      });
+    });
+
+    function switchSection(section) {
+      currentSection = section;
+      
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.section === section);
+      });
+      
+      document.querySelectorAll('.section-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+      
+      document.getElementById(`section-${section}`).classList.remove('hidden');
+      renderCurrentSection();
+    }
+
+    window.switchSection = switchSection;
+
+    function renderCurrentSection() {
+      if (currentSection === 'measurements') {
+        renderMeasurements();
+      } else if (currentSection === 'fabric') {
+        renderFabrics();
+      } else if (currentSection === 'quotes') {
+        renderQuotes();
+      } else if (currentSection === 'rebuttal') {
+        renderRebuttals();
+      } else if (currentSection === 'calendar') {
+        renderCalendar();
+      } else if (currentSection === 'daily') {
+        renderDailyMotivation();
+        renderTasks();
+      }
+    }
+
+    // Calendar Functions
+    function renderCalendar() {
+      const container = document.getElementById('calendar-container');
+      const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      
+      const firstDayOfYear = 4; // Thursday
+      
+      let html = '';
+      let currentDay = firstDayOfYear;
+      
+      months.forEach((month, monthIndex) => {
+        html += `
+          <div class="card p-4 rounded-xl">
+            <h3 class="text-xl font-bold text-accent mb-3 text-center">${month} 2026</h3>
+            <div class="grid grid-cols-7 gap-1 text-xs mb-2">
+              <div class="text-center font-bold" style="color: #000000;">Su</div>
+              <div class="text-center font-bold" style="color: #000000;">Mo</div>
+              <div class="text-center font-bold" style="color: #000000;">Tu</div>
+              <div class="text-center font-bold" style="color: #000000;">We</div>
+              <div class="text-center font-bold" style="color: #000000;">Th</div>
+              <div class="text-center font-bold" style="color: #000000;">Fr</div>
+              <div class="text-center font-bold" style="color: #000000;">Sa</div>
+            </div>
+            <div class="grid grid-cols-7 gap-1 text-xs">
+        `;
+        
+        for (let i = 0; i < currentDay; i++) {
+          html += '<div></div>';
+        }
+        
+        for (let day = 1; day <= daysInMonth[monthIndex]; day++) {
+          const isToday = isTodayDate(2026, monthIndex, day);
+          const dayClass = isToday ? 'bg-gradient-to-r from-pink-500 to-cyan-500 text-white font-bold' : 'hover:bg-pink-100';
+          const dateString = `2026-${String(monthIndex + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+          html += `<div class="p-1 text-center rounded cursor-pointer ${dayClass}" style="color: #000000;" onclick="openTaskModalWithDate('${dateString}')">${day}</div>`;
+        }
+        
+        html += `
+            </div>
+          </div>
+        `;
+        
+        currentDay = (currentDay + daysInMonth[monthIndex]) % 7;
+      });
+      
+      container.innerHTML = html;
+    }
+
+    function isTodayDate(year, month, day) {
+      const today = new Date();
+      return today.getFullYear() === year && today.getMonth() === month && today.getDate() === day;
+    }
+
+    // Daily Motivation Functions
+    function renderDailyMotivation() {
+      const dayOfYear = getDayOfYear();
+      const scripture = dailyScriptures[dayOfYear - 1];
+      
+      document.getElementById('scripture-text').textContent = `"${scripture.text}"`;
+      document.getElementById('scripture-reference').textContent = scripture.ref;
+      document.getElementById('scripture-date').textContent = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    }
+
+    function getDayOfYear() {
+      const now = new Date();
+      const start = new Date(now.getFullYear(), 0, 0);
+      const diff = now - start;
+      const oneDay = 1000 * 60 * 60 * 24;
+      return Math.floor(diff / oneDay);
+    }
+
+    // Task Functions
+    document.getElementById('btn-add-task').addEventListener('click', () => {
+      openModal('task');
+    });
+
+    document.getElementById('form-task').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      
+      const data = {
+        id: generateId(),
+        type: 'task',
+        taskText: formData.get('taskText') || '',
+        taskNotes: formData.get('taskNotes') || '',
+        dueDate: formData.get('dueDate') || '',
+        completed: false,
+        createdAt: new Date().toISOString()
+      };
+      
+      currentData.push(data);
+      saveData();
+      showToast("Task added!");
+      closeModal('task');
+      e.target.reset();
+      renderTasks();
+    });
+
+    function renderTasks() {
+      const tasks = currentData.filter(item => item.type === 'task');
+      const today = new Date().toISOString().split('T')[0];
+      const todayTasks = tasks.filter(t => t.dueDate === today || !t.dueDate);
+      
+      const todayContainer = document.getElementById('daily-tasks-list');
+      if (todayTasks.length === 0) {
+        todayContainer.innerHTML = '<p class="text-sm text-gray-400">No tasks for today. Add one to get started!</p>';
+      } else {
+        todayContainer.innerHTML = todayTasks.map(task => `
+          <div class="flex items-center gap-3 p-3 rounded-lg" style="background: rgba(255, 16, 240, 0.1);">
+            <input type="checkbox" ${task.completed ? 'checked' : ''} onchange="toggleTask('${task.id}')" class="w-5 h-5 accent-pink-500">
+            <div class="flex-1">
+              <span style="color: #000000;" class="${task.completed ? 'line-through opacity-50' : ''}">${escapeHtml(task.taskText)}</span>
+              ${task.taskNotes ? `<p class="text-xs text-gray-400 mt-1">${escapeHtml(task.taskNotes)}</p>` : ''}
+            </div>
+            <button onclick="deleteItem('${task.id}')" class="text-red-400 hover:text-red-600">✕</button>
+          </div>
+        `).join('');
+      }
+      
+      const allContainer = document.getElementById('all-tasks-list');
+      if (tasks.length === 0) {
+        allContainer.innerHTML = '<p class="text-sm text-gray-400">No tasks yet</p>';
+      } else {
+        allContainer.innerHTML = tasks.map(task => {
+          const dueText = task.dueDate ? new Date(task.dueDate).toLocaleDateString() : 'No due date';
+          return `
+            <div class="flex items-center gap-3 p-3 rounded-lg" style="background: rgba(255, 16, 240, 0.1);">
+              <input type="checkbox" ${task.completed ? 'checked' : ''} onchange="toggleTask('${task.id}')" class="w-5 h-5 accent-pink-500">
+              <div class="flex-1">
+                <span style="color: #000000;" class="${task.completed ? 'line-through opacity-50' : ''}">${escapeHtml(task.taskText)}</span>
+                <span class="text-xs text-gray-400 block">${dueText}</span>
+                ${task.taskNotes ? `<p class="text-xs text-gray-400 mt-1">${escapeHtml(task.taskNotes)}</p>` : ''}
+              </div>
+              <button onclick="deleteItem('${task.id}')" class="text-red-400 hover:text-red-600">✕</button>
+            </div>
+          `;
+        }).join('');
+      }
+    }
+
+    window.toggleTask = function(id) {
+      const task = currentData.find(i => i.id === id);
+      if (!task) return;
+      
+      task.completed = !task.completed;
+      saveData();
+      renderTasks();
+    };
+
+    window.openTaskModalWithDate = function(dateString) {
+      openModal('task');
+      document.querySelector('#form-task input[name="dueDate"]').value = dateString;
+    };
+
+    function updateDashboardStats() {
+      const clients = currentData.filter(item => item.type === 'measurement').length;
+      const fabrics = currentData.filter(item => item.type === 'fabric').length;
+      const projects = currentData.filter(item => item.type === 'quote').length;
+      
+      document.getElementById('stat-clients').textContent = clients;
+      document.getElementById('stat-fabrics').textContent = fabrics;
+      document.getElementById('stat-projects').textContent = projects;
+    }
+
+    // Measurements
+    document.getElementById('btn-add-measurement').addEventListener('click', () => {
+      editingItem = null;
+      document.getElementById('form-measurement').reset();
+      openModal('measurement');
+    });
+
+    document.getElementById('form-measurement').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      const measurements = {
+        bust: formData.get('bust') || '',
+        waist: formData.get('waist') || '',
+        hips: formData.get('hips') || '',
+        inseam: formData.get('inseam') || '',
+        sleeve: formData.get('sleeve') || '',
+        head: formData.get('head') || '',
+        notes: formData.get('notes') || ''
+      };
+      
+      const data = {
+        id: editingItem?.id || generateId(),
+        type: 'measurement',
+        clientName: formData.get('clientName') || '',
+        email: formData.get('email') || '',
+        measurements: JSON.stringify(measurements),
+        createdAt: editingItem?.createdAt || new Date().toISOString()
+      };
+      
+      if (editingItem) {
+        const index = currentData.findIndex(i => i.id === editingItem.id);
+        currentData[index] = data;
+      } else {
+        currentData.push(data);
+      }
+      
+      saveData();
+      showToast(editingItem ? "Client updated!" : "Client added!");
+      closeModal('measurement');
+      e.target.reset();
+      editingItem = null;
+      renderMeasurements();
+    });
+
+    window.editMeasurement = function(id) {
+      const item = currentData.find(i => i.id === id);
+      if (!item) return;
+      
+      editingItem = item;
+      const measurements = JSON.parse(item.measurements || '{}');
+      
+      document.querySelector('#form-measurement [name="clientName"]').value = item.clientName || '';
+      document.querySelector('#form-measurement [name="email"]').value = item.email || '';
+      document.querySelector('#form-measurement [name="bust"]').value = measurements.bust || '';
+      document.querySelector('#form-measurement [name="waist"]').value = measurements.waist || '';
+      document.querySelector('#form-measurement [name="hips"]').value = measurements.hips || '';
+      document.querySelector('#form-measurement [name="inseam"]').value = measurements.inseam || '';
+      document.querySelector('#form-measurement [name="sleeve"]').value = measurements.sleeve || '';
+      document.querySelector('#form-measurement [name="head"]').value = measurements.head || '';
+      document.querySelector('#form-measurement [name="notes"]').value = measurements.notes || '';
+      
+      openModal('measurement');
+    };
+
+    function renderMeasurements() {
+      const container = document.getElementById('measurements-list');
+      const measurements = currentData.filter(item => item.type === 'measurement');
+      
+      if (measurements.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full text-center py-12" style="color: rgba(255, 255, 255, 0.7);">
+            <p class="text-lg mb-2">No clients yet</p>
+            <p class="text-sm">Add your first client to track their measurements</p>
+          </div>
+        `;
+        return;
+      }
+      
+      container.innerHTML = measurements.map(item => {
+        const m = JSON.parse(item.measurements || '{}');
+        return `
+          <div class="card p-4 rounded-xl">
+            <h3 class="text-lg font-bold" style="color: #000000;" mb-2">${escapeHtml(item.clientName)}</h3>
+            ${item.email ? `<p class="text-sm mb-3" style="color: #666;">${escapeHtml(item.email)}</p>` : ''}
+            <div class="space-y-1 text-sm mb-3">
+              ${m.bust ? `<div class="flex justify-between"><span style="color: #666;">Bust:</span><span style="color: #000000;">${escapeHtml(m.bust)}"</span></div>` : ''}
+              ${m.waist ? `<div class="flex justify-between"><span style="color: #666;">Waist:</span><span style="color: #000000;">${escapeHtml(m.waist)}"</span></div>` : ''}
+              ${m.hips ? `<div class="flex justify-between"><span style="color: #666;">Hips:</span><span style="color: #000000;">${escapeHtml(m.hips)}"</span></div>` : ''}
+              ${m.inseam ? `<div class="flex justify-between"><span style="color: #666;">Inseam:</span><span style="color: #000000;">${escapeHtml(m.inseam)}"</span></div>` : ''}
+              ${m.sleeve ? `<div class="flex justify-between"><span style="color: #666;">Sleeve:</span><span style="color: #000000;">${escapeHtml(m.sleeve)}"</span></div>` : ''}
+              ${m.head ? `<div class="flex justify-between"><span style="color: #666;">Head:</span><span style="color: #000000;">${escapeHtml(m.head)}"</span></div>` : ''}
+            </div>
+            ${m.notes ? `<p class="text-xs mb-3" style="color: #666;">${escapeHtml(m.notes)}</p>` : ''}
+            <div class="flex gap-2">
+              <button onclick="editMeasurement('${item.id}')" class="btn-primary px-4 py-2 rounded-lg text-sm flex-1">Edit</button>
+              <button onclick="deleteItem('${item.id}')" class="btn-secondary px-4 py-2 rounded-lg text-sm flex-1">Delete</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Fabric
+    document.getElementById('btn-add-fabric').addEventListener('click', () => {
+      openModal('fabric');
+    });
+
+    document.getElementById('form-fabric').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      
+      const data = {
+        id: generateId(),
+        type: 'fabric',
+        fabricName: formData.get('fabricName') || '',
+        fabricType: formData.get('fabricType') || '',
+        fabricColor: formData.get('fabricColor') || '',
+        yardage: parseFloat(formData.get('yardage')) || 0,
+        cost: parseFloat(formData.get('cost')) || 0,
+        supplier: formData.get('supplier') || '',
+        createdAt: new Date().toISOString()
+      };
+      
+      currentData.push(data);
+      saveData();
+      showToast("Fabric added!");
+      closeModal('fabric');
+      e.target.reset();
+      renderFabrics();
+    });
+
+    function renderFabrics() {
+      const container = document.getElementById('fabric-list');
+      const fabrics = currentData.filter(item => item.type === 'fabric');
+      
+      if (fabrics.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full text-center py-12" style="color: #666;">
+            <p class="text-lg mb-2">No fabrics yet</p>
+            <p class="text-sm">Build your fabric library to track inventory</p>
+          </div>
+        `;
+        return;
+      }
+      
+      container.innerHTML = fabrics.map(item => `
+        <div class="card p-4 rounded-xl">
+          <div class="flex gap-3 mb-3">
+            <div class="fabric-swatch" style="background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);"></div>
+            <div class="flex-1">
+              <h3 class="text-lg font-bold" style="color: #000000;">${escapeHtml(item.fabricName)}</h3>
+              <p class="text-sm" style="color: #666;">${escapeHtml(item.fabricType)}</p>
+            </div>
+          </div>
+          <p class="text-sm mb-2" style="color: #000000;">Color: ${escapeHtml(item.fabricColor)}</p>
+          ${item.yardage > 0 ? `<p class="text-sm mb-2" style="color: #000000;">Available: ${item.yardage} yards</p>` : ''}
+          ${item.cost > 0 ? `<p class="text-sm mb-2" style="color: #000000;">Cost: $${item.cost.toFixed(2)}/yard</p>` : ''}
+          ${item.supplier ? `<p class="text-xs mb-3" style="color: #666;">From: ${escapeHtml(item.supplier)}</p>` : ''}
+          <button onclick="deleteItem('${item.id}')" class="btn-secondary px-4 py-2 rounded-lg text-sm w-full">Delete</button>
+        </div>
+      `).join('');
+    }
+
+    // Quotes
+    document.getElementById('btn-create-quote').addEventListener('click', () => {
+      populateClientDropdown();
+      openModal('quote');
+    });
+
+    function populateClientDropdown() {
+      const select = document.getElementById('quote-client-select');
+      const clients = currentData.filter(item => item.type === 'measurement');
+      
+      select.innerHTML = '<option value="">-- Select from saved clients or enter new below --</option>';
+      
+      clients.forEach(client => {
+        const option = document.createElement('option');
+        option.value = client.id;
+        option.textContent = client.clientName;
+        select.appendChild(option);
+      });
+    }
+
+    window.fillClientInfo = function(id) {
+      if (!id) {
+        document.getElementById('quote-client-name').value = '';
+        document.getElementById('quote-client-email').value = '';
+        return;
+      }
+      
+      const client = currentData.find(i => i.id === id);
+      if (!client) return;
+      
+      document.getElementById('quote-client-name').value = client.clientName || '';
+      document.getElementById('quote-client-email').value = client.email || '';
+    };
+
+    document.getElementById('form-quote').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      
+      const photoFile = document.getElementById('inspiration-photo').files[0];
+      let inspirationPhotoData = null;
+      
+      if (photoFile) {
+        inspirationPhotoData = await fileToBase64(photoFile);
+      }
+      
+      const data = {
+        id: generateId(),
+        type: 'quote',
+        clientName: formData.get('clientName') || '',
+        email: formData.get('email') || '',
+        itemName: formData.get('itemName') || '',
+        price: parseFloat(formData.get('price')) || 0,
+        quoteDetails: formData.get('quoteDetails') || '',
+        status: formData.get('status') || 'draft',
+        inspirationPhoto: inspirationPhotoData || '',
+        createdAt: new Date().toISOString()
+      };
+      
+      currentData.push(data);
+      saveData();
+      showToast("Quote created!");
+      closeModal('quote');
+      e.target.reset();
+      renderQuotes();
+    });
+
+    async function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function renderQuotes() {
+      const container = document.getElementById('quotes-list');
+      const quotes = currentData.filter(item => item.type === 'quote');
+      
+      if (quotes.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12" style="color: #666;">
+            <p class="text-lg mb-2">No quotes yet</p>
+            <p class="text-sm">Create your first quote or invoice</p>
+          </div>
+        `;
+        return;
+      }
+      
+      container.innerHTML = quotes.map(item => {
+        const hasPhoto = item.inspirationPhoto;
+        return `
+          <div class="card p-4 rounded-xl">
+            <div class="flex justify-between items-start mb-3">
+              <div class="flex-1">
+                <h3 class="text-lg font-bold" style="color: #000000;">${escapeHtml(item.itemName)}</h3>
+                <p class="text-sm" style="color: #666;">For: ${escapeHtml(item.clientName)}</p>
+                ${item.email ? `<p class="text-xs" style="color: #666;">${escapeHtml(item.email)}</p>` : ''}
+              </div>
+              <div class="text-right">
+                <p class="text-2xl font-bold text-accent">$${item.price.toFixed(2)}</p>
+                <span class="text-xs px-2 py-1 rounded" style="background: rgba(255, 16, 240, 0.2); color: #ff10f0;">${escapeHtml(item.status)}</span>
+              </div>
+            </div>
+            ${item.quoteDetails ? `<p class="text-sm mb-3" style="color: #000000;">${escapeHtml(item.quoteDetails)}</p>` : ''}
+            ${hasPhoto ? `
+              <div class="mb-3">
+                <img src="${item.inspirationPhoto}" alt="Inspiration" class="w-full h-48 object-cover rounded-lg border-2 border-pink-300" loading="lazy" onerror="console.error('Image failed to load:', this.src); this.style.background='#e5e7eb'; this.alt='Image unavailable';">
+                <p class="text-xs text-gray-500 mt-1">Inspiration Photo</p>
+              </div>
+            ` : ''}
+            <div class="flex gap-2">
+              <button onclick="emailQuote('${item.id}')" class="btn-primary px-4 py-2 rounded-lg text-sm flex-1">📧 Email Quote</button>
+              <button onclick="deleteItem('${item.id}')" class="btn-secondary px-4 py-2 rounded-lg text-sm">Delete</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    window.emailQuote = function(id) {
+      const item = currentData.find(i => i.id === id);
+      if (!item) return;
+      
+      const businessName = 'Oh Sew Sheek';
+      const businessEmail = 'hello@ohsewsheek.com';
+      
+      let emailBody = `Hi ${item.clientName},
+
+Thank you for your interest! Here's your detailed quote:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 QUOTE DETAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Item/Service: ${item.itemName}
+Total Price: $${item.price.toFixed(2)}
+
+${item.quoteDetails ? `Project Description:
+${item.quoteDetails}
+
+` : ''}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Next Steps:
+1. Review the quote details above
+2. Reply to this email with any questions
+3. Once approved, we'll collect a 50% deposit to begin
+4. Expected completion: 10-20 days from deposit
+
+Payment Methods: Venmo, CashApp, PayPal, Zelle, Credit/Debit Card
+
+Best regards,
+${businessName}
+${businessEmail}`;
+      
+      const subject = encodeURIComponent(`Quote for ${item.itemName} - ${businessName}`);
+      const body = encodeURIComponent(emailBody);
+      
+      window.open(`mailto:${item.email}?subject=${subject}&body=${body}`, '_blank');
+      showToast("Email opened!");
+    };
+
+    // Pricing Calculator
+    window.calculatePrice = function() {
+      const material = parseFloat(document.getElementById('pricing-material').value) || 0;
+      const hours = parseFloat(document.getElementById('pricing-hours').value) || 0;
+      const rate = parseFloat(document.getElementById('pricing-rate').value) || 25;
+      const additional = parseFloat(document.getElementById('pricing-additional').value) || 0;
+      const margin = parseFloat(document.getElementById('pricing-margin').value) || 30;
+      const platform = document.getElementById('pricing-platform').value;
+      
+      let platformFee = 0;
+      if (platform === 'etsy') platformFee = 0.065;
+      else if (platform === 'facebook') platformFee = 0.05;
+      
+      const labor = hours * rate;
+      const subtotal = material + labor + additional;
+      const profitAmount = subtotal * (margin / 100);
+      const priceBeforeFee = subtotal + profitAmount;
+      const feeAmount = priceBeforeFee * platformFee;
+      const finalPrice = priceBeforeFee + feeAmount;
+      const netProfit = finalPrice - subtotal - feeAmount;
+      
+      document.getElementById('breakdown-material').textContent = `$${material.toFixed(2)}`;
+      document.getElementById('breakdown-labor').textContent = `$${labor.toFixed(2)}`;
+      document.getElementById('breakdown-additional').textContent = `$${additional.toFixed(2)}`;
+      document.getElementById('breakdown-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+      document.getElementById('breakdown-profit').textContent = `$${profitAmount.toFixed(2)}`;
+      document.getElementById('breakdown-fee').textContent = `$${feeAmount.toFixed(2)}`;
+      document.getElementById('breakdown-net').textContent = `$${netProfit.toFixed(2)}`;
+      document.getElementById('final-price').textContent = `$${finalPrice.toFixed(2)}`;
+      
+      document.getElementById('pricing-results').classList.remove('hidden');
+    };
+
+    // Mockup Generator
+    window.generateMockupPrompt = function() {
+      const type = document.getElementById('mockup-type').value;
+      const fabric = document.getElementById('mockup-fabric').value || 'silk fabric';
+      const details = document.getElementById('mockup-details').value;
+      
+      let prompt = '';
+      
+      if (type === 'bonnet') {
+        prompt = `Create a professional product photo of a luxury silk bonnet made from ${fabric}. The bonnet should have a gathered elastic band and look soft and luxurious. ${details ? details + '. ' : ''}Show it laid flat on a clean white background with soft, even lighting. The image should be high-quality, suitable for e-commerce, with the bonnet as the main focus. Style: product photography, professional, clean, minimal.`;
+      } else if (type === 'durag') {
+        prompt = `Create a professional product photo of a custom durag made from ${fabric}. The durag should have long ties and look smooth and premium. ${details ? details + '. ' : ''}Display it folded neatly or laid out to show the full design on a clean white background. Professional e-commerce style photography with soft shadows and excellent lighting.`;
+      } else if (type === 'facemask') {
+        prompt = `Create a professional product photo of a reusable face mask made from ${fabric}. The mask should have ear loops and look comfortable and stylish. ${details ? details + '. ' : ''}Show it laid flat on a white background, displaying both the front design and the overall shape. Clean, professional product photography suitable for online stores.`;
+      } else if (type === 'hoodie') {
+        prompt = `Create a professional product photo of a custom hoodie made from ${fabric}. The hoodie should have a kangaroo pocket and drawstring hood. ${details ? details + '. ' : ''}Display it laid flat or on an invisible mannequin on a white background. Professional e-commerce photography showing texture and details clearly.`;
+      } else if (type === 'socks') {
+        prompt = `Create a professional product photo of custom socks made from ${fabric}. The socks should look comfortable and well-made. ${details ? details + '. ' : ''}Show them arranged attractively on a white background. Clean, professional product photography with even lighting.`;
+      } else if (type === 'vest') {
+        prompt = `Create a professional product photo of a custom vest made from ${fabric}. The vest should look tailored and stylish. ${details ? details + '. ' : ''}Display it laid flat or on an invisible mannequin on a white background. Professional product photography highlighting the craftsmanship.`;
+      } else if (type === 'joggers') {
+        prompt = `Create a professional product photo of custom joggers made from ${fabric}. The joggers should have elastic cuffs and a comfortable fit. ${details ? details + '. ' : ''}Show them laid flat on a white background displaying the full length and design. Clean, professional e-commerce style photography.`;
+      }
+      
+      document.getElementById('mockup-prompt-text').textContent = prompt;
+      document.getElementById('mockup-result').classList.remove('hidden');
+    };
+
+    window.copyMockupPrompt = function() {
+      const text = document.getElementById('mockup-prompt-text').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Prompt copied!');
+      });
+    };
+
+    // Content Ideas
+    window.generateContentPrompt = function() {
+      const topic = document.getElementById('content-topic-input').value.trim();
+      const platform = document.getElementById('content-platform-input').value;
+      
+      if (!topic) {
+        showToast('Please enter a product or topic first');
+        return;
+      }
+      
+      let platformText = '';
+      if (platform === 'instagram') platformText = 'Instagram Reel';
+      else if (platform === 'tiktok') platformText = 'TikTok video';
+      else if (platform === 'facebook') platformText = 'Facebook post';
+      else if (platform === 'pinterest') platformText = 'Pinterest pin description';
+      else platformText = 'multiple social media platforms';
+      
+      const prompt = `I run a custom sewing business called "Oh Sew Sheek" in 2025. I create handmade items like silk bonnets, durags, hoodies, face masks, and custom apparel.
+
+Create viral-worthy content for ${platformText} about: ${topic}
+
+Please provide:
+1. A catchy hook/opening line
+2. The main content text (keep it engaging and authentic)
+3. A call-to-action
+4. 15-20 trending hashtags for 2025-2026 that will maximize reach
+5. Any special formatting tips for the platform
+
+Make it feel personal, relatable, and designed to go viral while showcasing the quality and care that goes into handmade products. The tone should be warm, professional, and community-focused.`;
+      
+      document.getElementById('content-prompt-text').textContent = prompt;
+      document.getElementById('content-prompt-result').classList.remove('hidden');
+    };
+
+    window.copyContentPrompt = function() {
+      const text = document.getElementById('content-prompt-text').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Prompt copied!');
+      });
+    };
+
+    window.copyContent = function(index) {
+      const contentCards = document.querySelectorAll('#section-content .prompt-box');
+      const text = contentCards[index].textContent.trim();
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Content copied!');
+      });
+    };
+
+    // Rebuttals
+    document.getElementById('btn-add-custom-rebuttal').addEventListener('click', () => {
+      openModal('custom-rebuttal');
+    });
+
+    document.getElementById('form-custom-rebuttal').addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      
+      const data = {
+        id: generateId(),
+        type: 'custom-rebuttal',
+        rebuttalText: formData.get('rebuttalText') || '',
+        createdAt: new Date().toISOString()
+      };
+      
+      currentData.push(data);
+      saveData();
+      showToast("Custom rebuttal saved!");
+      closeModal('custom-rebuttal');
+      e.target.reset();
+      renderRebuttals();
+    });
+
+    window.generateRebuttalPrompt = function() {
+      const objection = document.getElementById('rebuttal-objection-input').value.trim();
+      
+      if (!objection) {
+        showToast('Please enter a customer objection first');
+        return;
+      }
+      
+      const prompt = `I run a custom sewing business called "Oh Sew Sheek" where I create handmade items like silk bonnets, durags, hoodies, face masks, and custom apparel. A customer just said: "${objection}"
+
+Please provide a professional, empathetic, and persuasive response that:
+1. Acknowledges their concern genuinely
+2. Provides a clear explanation or solution
+3. Highlights the value of my handmade products
+4. Maintains a warm, friendly tone
+5. Ends with a call-to-action or question to continue the conversation
+
+Keep the response conversational and authentic, as if I'm talking directly to the customer.`;
+      
+      document.getElementById('rebuttal-prompt-text').textContent = prompt;
+      document.getElementById('rebuttal-prompt-result').classList.remove('hidden');
+    };
+
+    window.copyRebuttalPrompt = function() {
+      const text = document.getElementById('rebuttal-prompt-text').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Prompt copied!');
+      });
+    };
+
+    function renderRebuttals() {
+      const container = document.getElementById('rebuttal-list');
+      const customRebuttals = currentData.filter(item => item.type === 'custom-rebuttal');
+      
+      let html = '<h3 class="text-xl font-bold text-accent mb-3">Pre-Written Rebuttals</h3>';
+      
+      html += rebuttals.map((item, index) => `
+        <div class="rebuttal-item">
+          <h4 class="font-bold mb-2" style="color: #000000;">❓ "${item.objection}"</h4>
+          <p class="text-sm mb-3" style="color: #000000;">💬 ${item.response}</p>
+          <button onclick="copyRebuttal(${index})" class="btn-secondary px-4 py-1 rounded text-xs">Copy Response</button>
+        </div>
+      `).join('');
+      
+      if (customRebuttals.length > 0) {
+        html += '<h3 class="text-xl font-bold text-accent mb-3 mt-6">Your Custom Rebuttals</h3>';
+        html += customRebuttals.map(item => `
+          <div class="rebuttal-item">
+            <h4 class="font-bold mb-2" style="color: #000000;">❓ "${escapeHtml(item.rebuttalText)}"</h4>
+            <p class="text-sm mb-3" style="color: #000000;">💡 Use the ChatGPT generator above to create a response!</p>
+            <button onclick="deleteItem('${item.id}')" class="btn-secondary px-4 py-1 rounded text-xs">Delete</button>
+          </div>
+        `).join('');
+      }
+      
+      container.innerHTML = html;
+    }
+
+    window.copyRebuttal = function(index) {
+      navigator.clipboard.writeText(rebuttals[index].response).then(() => {
+        showToast('Response copied!');
+      });
+    };
+
+    document.getElementById('rebuttal-search').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const filtered = rebuttals.filter(r => 
+        r.objection.toLowerCase().includes(query) || 
+        r.response.toLowerCase().includes(query)
+      );
+      
+      const container = document.getElementById('rebuttal-list');
+      container.innerHTML = filtered.map((item, index) => `
+        <div class="rebuttal-item">
+          <h4 class="font-bold mb-2" style="color: #000000;">❓ "${item.objection}"</h4>
+          <p class="text-sm mb-3" style="color: #000000;">💬 ${item.response}</p>
+          <button onclick="copyRebuttal(${rebuttals.indexOf(item)})" class="btn-secondary px-4 py-1 rounded text-xs">Copy Response</button>
+        </div>
+      `).join('');
+    });
+
+    // Glossary
+    function renderGlossary() {
+      const container = document.getElementById('glossary-list');
+      container.innerHTML = glossaryTerms.map(item => `
+        <div class="border-l-4 pl-4 py-2 mb-3" style="border-color: #ff1493; background: #fff0f7; border-radius: 0.5rem; padding: 1rem;">
+          <h4 class="font-bold mb-1" style="color: #1a1a1a;">${item.term}</h4>
+          <p class="text-sm" style="color: #666;">${item.definition}</p>
+        </div>
+      `).join('');
+    }
+
+    document.getElementById('glossary-search').addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const filtered = glossaryTerms.filter(t => 
+        t.term.toLowerCase().includes(query) || 
+        t.definition.toLowerCase().includes(query)
+      );
+      
+      const container = document.getElementById('glossary-list');
+      container.innerHTML = filtered.map(item => `
+        <div class="border-l-4 pl-4 py-2 mb-3" style="border-color: #ff1493; background: #fff0f7; border-radius: 0.5rem; padding: 1rem;">
+          <h4 class="font-bold mb-1" style="color: #1a1a1a;">${item.term}</h4>
+          <p class="text-sm" style="color: #666;">${item.definition}</p>
+        </div>
+      `).join('');
+    });
+
+    // Modal Management
+    function openModal(type) {
+      document.getElementById(`modal-${type}`).classList.add('show');
+    }
+
+    function closeModal(type) {
+      document.getElementById(`modal-${type}`).classList.remove('show');
+    }
+
+    window.closeModal = closeModal;
+
+    // Delete
+    window.deleteItem = function(id) {
+      const item = currentData.find(i => i.id === id);
+      if (!item) return;
+      
+      const confirmed = confirm('Are you sure you want to delete this item?');
+      if (!confirmed) return;
+      
+      currentData = currentData.filter(i => i.id !== id);
+      saveData();
+      showToast('Deleted!');
+      renderCurrentSection();
+    };
+
+    // Utilities
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    function generateId() {
+      return Date.now().toString(36) + Math.random().toString(36).substr(2);
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    // Initialize
+    initializeApp();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c1d2d8ca232e1de',t:'MTc2OTA2NTI2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
